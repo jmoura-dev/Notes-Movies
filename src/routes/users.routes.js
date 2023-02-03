@@ -8,6 +8,7 @@ const usersController = new UsersController();
 
 usersRoutes.post("/", usersController.create);
 usersRoutes.put("/", ensureAuthenticated, usersController.update);
+usersRoutes.patch("/avatar", ensureAuthenticated)
 
 module.exports = usersRoutes;
 
